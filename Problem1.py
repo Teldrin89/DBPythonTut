@@ -1,6 +1,6 @@
 # Problem1: Receive miles and convert to kilometers
 # kilometers = miles * 1.60934
-# Enter Miles 5
+# Enter Miles, for example 5
 # 5 miles equals 8.04 kilometers
 
 

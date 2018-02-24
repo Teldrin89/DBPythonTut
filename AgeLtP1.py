@@ -15,7 +15,7 @@ age = eval(input("Enter age: "))
 # If age is both greater than or equal to 1 and less than or
 # equal to 18 Important
 
-if (age >=1) and (age <= 18):
+if (age >= 1) and (age <= 18):
     print("Important Birthday")
 
 # if age is either 21 or 50 Important

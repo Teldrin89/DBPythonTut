@@ -24,6 +24,4 @@ elif operator == "/":
 else:
     print('Use either + - * or / next time')
 
-
-
 # Print the result

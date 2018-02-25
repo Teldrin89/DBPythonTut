@@ -7,6 +7,8 @@
 # After changes in line 16 and 27 (adding and removing 23)
 # it works for both lower and upper cases - although the
 # resulting code is not exactly the one from unicode
+# I changed it to run with 2 variables - one for changing back
+# to normal string and one to store unicode values
 
 # Input - Enter a string to hide in uppercase
 hidden_message = input("Enter a string to hide "

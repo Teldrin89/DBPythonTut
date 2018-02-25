@@ -38,7 +38,9 @@ stump_spaces = tree_height - 1
 # Make sure the right number of rows are printed
 # While loop to run through all levels of the tree height
 while tree_height != 0:
-    # Print the spaces
+    # Print the spaces, ending print with 'end=""' suggest
+    # that next print statement should come up after this
+    # one in the same line
     for i in range(spaces):
         print(' ', end="")
     # Print the hashes

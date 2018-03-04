@@ -19,9 +19,46 @@ def get_area(shape):
     elif shape == "circle":
         # Call circle function
         circle_area()
+    elif shape == "triangle":
+        # Call triangle function
+        triangle_area()
+    elif shape == "parallelogram":
+        # Call parallelogram function
+        parallelogram_area()
+    elif shape == "trapezoid":
+        # Call trapezoid function
+        trapezoid_area()
     # Cover any other case
     else:
         print("Please enter rectangle or circle")
+
+
+def trapezoid_area():
+    # Function for trapezoid area calculation
+    # Get input data: base, top and height
+    base = float(input("Enter the base value: "))
+    top = float(input("Enter the top value: "))
+    height = float(input("Enter the height: "))
+    area = ((base + top) / 2) * height
+    print("The area of the trapezoid is ", area)
+
+
+def parallelogram_area():
+    # Function for parallelogram ("romb") area calculation
+    # Get input data: base and height
+    base = float(input("Enter the base value: "))
+    height = float(input("Enter the height: "))
+    area = base * height
+    print("The area of the parallelogram is ", area)
+
+
+def triangle_area():
+    # Function for triangle calculation
+    # Get input: base and height
+    base = float(input("Enter the base value: "))
+    height = float(input("Enter the height: "))
+    area = 0.5 * base * height
+    print("The area of the triangle is ", area)
 
 
 def rectangle_area():

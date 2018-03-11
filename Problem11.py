@@ -10,6 +10,9 @@ import random
 # running for 5 items, each time appending the number in a list
 rand_list = []
 for i in range(1, 5):
-    rand_number = random.randrange(1, 9)
+    rand_number = random.randrange(1, 10)
     rand_list.append(rand_number)
 print(rand_list)
+
+# Mostly the same as in DB (with one line less as you can append
+# without having the random number variable

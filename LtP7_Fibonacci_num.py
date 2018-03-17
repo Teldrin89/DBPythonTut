@@ -26,7 +26,7 @@ def fib(num):
         return result
 
 
-print(fib(10))
+print(fib(8))
 print(fib(3))
 print(fib(4))
 print(fib(5))

@@ -21,6 +21,7 @@ def fib(num):
 # Ask how many points you need for the sequence
 endNumber = input("How many numbers from Fibonacci "
                   "sequence: ")
+# This conversion to integer could be done in input above
 endNumber = int(endNumber)
 
 # Loop while calling for each new number plus print results
@@ -29,3 +30,16 @@ for i in range(0, endNumber):
 
 # Print end statement
 print("End of calc")
+
+# DB take on that problem - only difference is the usage of
+# while loop instead of for and there is one additional
+# variable (that later is printed out)
+
+# Initiation of variable to be used in while loop
+k = 1
+while k < endNumber:
+    fibValue = fib(k)
+    print(fibValue)
+    k += 1
+
+print("All done")

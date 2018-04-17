@@ -1,5 +1,5 @@
 # Problem 17:
-# - create a file named mydata2.txt - put any type of data
+# - create a file named "mydata2.txt" - put any type of data
 # - use methods from LtP8 how to open a file without "with"
 #   (open in "try" block)
 # - catch FileNotFoundError

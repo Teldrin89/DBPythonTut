@@ -23,3 +23,11 @@ print(list(map((lambda x: x * 3), oneTo10)))
 # multiple lists - add values from 1st and 2nd lists
 mlist = list(map((lambda x, y: x + y), [1, 2, 3], [1, 2, 3]))
 print(mlist)
+
+# reduce - a function that can receive a list and return
+# a single result - this function has t be imported
+from functools import reduce
+# generate a single number that is the result of single
+# function - in this case simple addition of values from
+# the provided range
+print(reduce((lambda x, y: x + y), range(1, 6)))

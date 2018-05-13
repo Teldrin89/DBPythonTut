@@ -36,5 +36,17 @@ print([x*y for x in range(1, 3) for y in range(11, 16)])
 print([x for x in [i * 2 for i in range(10)]
        if x % 8 == 0])
 
+# list comprehension in work with multidimensional lists
+multi_list = [[1, 2, 3],
+              [4, 5, 6],
+              [7, 8, 9]]
+# printout the second character from each of inner lists
+# from multidimensional list
+print([col[1] for col in multi_list])
+# printout diagonal from multidimensional list - this
+# calls out for the place in array using 2 of the same
+# values ("[i][i]", hence we get diagonal
+print([multi_list[i][i] for i in range(len(multi_list))])
+
 
 

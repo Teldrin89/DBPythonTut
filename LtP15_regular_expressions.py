@@ -16,6 +16,8 @@ allApes = re.findall("ape", "The ape was at the apex")
 # printout all "ape"s found
 for i in allApes:
     print(i)
+
+print()
 # it printed out the "ape" 2 times but only the "ape" part for
 # the word "apex" as it searches only for exact string
 
@@ -25,4 +27,44 @@ for i in allApes:
 allApes2 = re.findall("ape.", "The ape was at the apex")
 # printout all "ape"s found
 for i in allApes2:
+    print(i)
+
+print()
+# create a regular string
+theStr = "The ape was at the apex"
+# use finditer in iterable to find the matches
+for i in re.finditer("ape.", theStr):
+    # span function will show the indexes - starting and ending
+    # for the string in search
+    locTuple = i.span()
+    # printout starting and ending indexes
+    print(locTuple)
+    # printout the matched strings
+    print(theStr[locTuple[0]:locTuple[1]])
+
+print()
+# square brackets are used to match any of the letters put
+# in there
+animalStr = "Cat rat mat pat"
+# the letters put there are case sensitive (with lower case "c"
+# the "Cat" would not be found
+allAnimals = re.findall("[Crmfp]at", animalStr)
+# printout all found strings
+for i in allAnimals:
+    print(i)
+
+print()
+# to search the range of letters use "-" in brackets
+someAnimals = re.findall("[c-mC-m]at", animalStr)
+# printout result that start with letters between "c" and "m"
+# either upper or lower case
+for i in someAnimals:
+    print(i)
+print()
+
+# to find string that don't start with specific character use
+# caret symbol "^"
+notSomeAnimals = re.findall("[^Cr]at", animalStr)
+# printout results
+for i in notSomeAnimals:
     print(i)

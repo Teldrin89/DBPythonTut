@@ -20,7 +20,7 @@ print()
 # new random string
 randStr2 = "doctor doctors doctor's"
 # use re.compile to set the criteria
-regex2 = re.compile("[doctr]+['s]*")
+regex2 = re.compile("[doctor]+['s]*")
 # use re.findall to get all matching results from random string
 matches2 = re.findall(regex2, randStr2)
 # printout the results

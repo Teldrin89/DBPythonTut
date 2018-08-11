@@ -26,7 +26,7 @@ for i in matches:
 print()
 
 # subexpressions are part of larger expression - if you want to match
-# a larger block of string from a random string
+# a larger block of strings from a random string
 
 # create a random string with a specific part that is needed to be
 # found

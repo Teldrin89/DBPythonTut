@@ -18,4 +18,28 @@ for i in matches:
     print(i)
 # put empty line
 print()
-# todo left in 5:06 part 17
+# a more real world example - taking a link from website but without bold tags
+randStr2 = "<a href='#'><b>The link</b></a>"
+# create a regular expression with compile function, matching bold tags, grabbing
+# anything and taking the lest number of results
+regex2 = re.compile(r"<b>(.*?)</b>")
+# now to replace the link without bold parts: substitute in random string the
+# regular expression found but using the back reference
+randStr2 = re.sub(regex2, r"\1", randStr2)
+# printout the resulting string
+print(randStr2)
+# put empty line
+print()
+# another example - given a phone number use regular expression to match number
+# and change a final output for different format
+randStr3 = "424-555-1212"
+# create a regular expression that will look for a phone number in standard format
+# using to subexpressions matching digits
+regex3 = re.compile(r"([\d]{3})-([\d]{3}-[\d]{4})")
+# substitute using the sub regular expression function and filling it with the
+# new format for phone number
+randStr3 = re.sub(regex3, r"(\1)\2", randStr3)
+# printout the new format
+print(randStr3)
+# put empty line
+print()

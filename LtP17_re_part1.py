@@ -43,4 +43,3 @@ randStr3 = re.sub(regex3, r"(\1)\2", randStr3)
 print(randStr3)
 # put empty line
 print()
-# todo ended in 8:57, end of file next will be problem solving (26)

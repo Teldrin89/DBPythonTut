@@ -51,11 +51,17 @@ print()
 # (?<!expression) - negative look behind
 
 # random string with items, numbers and prices
-randStr4 = "8 Apples $3, 1 Bread $1, 1 Cereal $4"
+randStr4 = "8 Apples $34, 1 Bread $11, 1 Cereal $4"
 # regular expression will look just how many items have been on the list
-regex4 = re.compile(r"(?<!\$)\d+")
+regex4 = re.compile(r"(?<!\$)\d+(?!,)")
 # using the negative look behind in subexpression there is expression that should be
 # omitted and then followed by whatever digits are there
+# regular expression has been updated to take into account cases with 2 digits
+# for the price of items (previously treated the second digit as separate and added it
+# to number of items) - additional part is the negative look behind to ignore digits
+# ending with ","
+# still not working for more than 2-digit price and for the 2-digit price of last item
+# as it is without comma - NEEDS ADDITIONAL WORK!
 matches4 = re.findall(regex4, randStr4)
 # printout the number of different items - length of matches list
 print(len(matches4))

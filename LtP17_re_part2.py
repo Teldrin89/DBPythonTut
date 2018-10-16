@@ -1,4 +1,6 @@
 import re
+from functools import reduce
+
 # "look ahead" will look for a pattern to much but not return: (?=expression)
 # example of a string
 randStr = "One two three four"
@@ -42,3 +44,22 @@ for i in matches3:
     print(i)
 
 print()
+
+# examples of negative "look ahead" and "look behind" to look for text that doesn't
+# match the pattern:
+# (?!expression) - negative look ahead
+# (?<!expression) - negative look behind
+
+# random string with items, numbers and prices
+randStr4 = "8 Apples $3, 1 Bread $1, 1 Cereal $4"
+# regular expression will look just how many items have been on the list
+regex4 = re.compile(r"(?<!\$)\d+")
+# using the negative look behind in subexpression there is expression that should be
+# omitted and then followed by whatever digits are there
+matches4 = re.findall(regex4, randStr4)
+# printout the number of different items - length of matches list
+print(len(matches4))
+# convert list of strings to integers so that they then can be added for a sum of items
+matches4 = [int(i) for i in matches4]
+# use "reduce" function to sum all of the items found in the list
+print("Total number of items: {}".format(reduce((lambda x, y: x + y), matches4)))
